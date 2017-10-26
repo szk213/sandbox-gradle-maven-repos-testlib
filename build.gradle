@@ -9,6 +9,12 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'maven-publish'
+apply from: 'maven-push.gradle'
+
+
+//println project.buildDir
+//println
 
 // In this section you declare where to find the dependencies of your project
 repositories {

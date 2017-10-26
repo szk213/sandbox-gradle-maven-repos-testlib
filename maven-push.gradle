@@ -1,0 +1,22 @@
+task sourceJar(type: Jar) {
+  from sourceSets.main.allJava
+  classifier "sources"
+}
+
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'test' //ライブラリ公開用のGroupドメイン
+            artifactId 'testlib' //ライブラリ名
+            version '0.0.1' //バージョン
+            artifact sourceJar
+        }
+    }
+    repositories {
+        maven {
+            url "file:${rootDir}/maven-repo" //Mavenリポジトリを作る場所の指定
+
+        }
+    }
+}
