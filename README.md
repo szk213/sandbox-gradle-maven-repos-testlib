@@ -3,6 +3,13 @@ sandbox-gradle-maven-repos-testlib
 
 gitに置いたmavenリポジトリのライブラリをgradleで読み込んでみるテスト(読み込まれる側)
 
+## build
+
+```
+gradle build
+gradle publish
+```
+
 ## 読み込む側
 - [sandbox-gradle-git-repo-plugin](szk213/sandbox-gradle-git-repo-plugin)
 

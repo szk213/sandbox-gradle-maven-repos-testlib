@@ -1,16 +1,18 @@
-task sourceJar(type: Jar) {
-  from sourceSets.main.allJava
-  classifier "sources"
-}
+// ソースを含める場合
+//task sourceJar(type: Jar) {
+//  from sourceSets.main.allJava
+//  classifier "sources"
+//}
 
 
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId 'test' //ライブラリ公開用のGroupドメイン
+            groupId 'com.szk213.sandbox' //ライブラリ公開用のGroupドメイン
             artifactId 'testlib' //ライブラリ名
             version '0.0.1' //バージョン
-            artifact sourceJar
+            //artifact sourceJar
+            from components.java
         }
     }
     repositories {
